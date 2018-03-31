@@ -43,6 +43,8 @@
 		"envy": "1.1.0",
 		"express": "4.16.3",
 		"mongoose": "5.0.12",
+		"mongoose-query": "0.5.1",
+		"mongoose-timestamp": "0.6.0",
 		"secure-password": "3.0.0"
 	}
 }
