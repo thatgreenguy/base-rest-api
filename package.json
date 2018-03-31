@@ -1,0 +1,41 @@
+{
+	"name": "base-rest-api",
+	"version": "1.0.0",
+	"description": "Base Rest API - Authentication, Authorisation, JWT, MongoDb",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/thatgreenguy/base-rest-api.git"
+	},
+	"keywords": [
+		"REST",
+		"API",
+		"JWT",
+		"MONGODB",
+		"AUTHENTICATION",
+		"AUTHORISATION",
+		"USER",
+		"ROLES"
+	],
+	"author": "thatgreenguy",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/thatgreenguy/base-rest-api/issues"
+	},
+	"homepage": "https://github.com/thatgreenguy/base-rest-api#readme",
+	"devDependencies": {
+		"babel-preset-env": "1.6.1",
+		"eslint": "4.19.0",
+		"eslint-config-standard": "11.0.0",
+		"eslint-config-standard-jsdoc": "0.3.2",
+		"eslint-plugin-import": "2.9.0",
+		"eslint-plugin-jsdoc": "3.5.0",
+		"eslint-plugin-node": "6.0.1",
+		"eslint-plugin-promise": "3.7.0",
+		"eslint-plugin-standard": "3.0.1",
+		"prettier": "1.11.1"
+	}
+}
