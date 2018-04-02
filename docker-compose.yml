@@ -5,5 +5,7 @@ services:
     image: mvertes/alpine-mongo
     volumes:
       - ./db-data:/data/db
-    restart: always
-    
+  node:
+    build: ./
+    links:
+      - db
