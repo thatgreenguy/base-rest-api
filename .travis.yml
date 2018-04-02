@@ -6,6 +6,4 @@ install:
 script:
   - npm test
 env:
-  - DB_HOST=dummyhost
-  - DB_PORT=dummyport
-  - APP=dummyapp
+  - DB_HOST=dummyhost DB_PORT=dummyport APP=dummyapp
