@@ -1,5 +1,5 @@
 'use strict'
-const CFG = require('./config/cfg')
+const CFG = require('./src/utils/cfg')
 
 function dostuff () {
   console.log(JSON.stringify(CFG))
