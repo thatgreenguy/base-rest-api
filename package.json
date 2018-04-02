@@ -4,7 +4,7 @@
 	"description": "Base Rest API - Authentication, Authorisation, JWT, MongoDb",
 	"main": "index.js",
 	"scripts": {
-		"test": "nyc ava --verbose"
+		"test": "nyc ava --verbose && nyc report --reporter=text-lcov | coveralls"
 	},
 	"repository": {
 		"type": "git",
@@ -27,14 +27,10 @@
 	},
 	"homepage": "https://github.com/thatgreenguy/base-rest-api#readme",
 	"ava": {
-		"require": [
-			"babel-register"
-		]
+		"require": ["babel-register"]
 	},
 	"babel": {
-		"presets": [
-			"env"
-		],
+		"presets": ["env"],
 		"env": {
 			"development": {
 				"sourceMaps": "inline"
