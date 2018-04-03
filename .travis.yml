@@ -7,4 +7,4 @@ script:
   - npm test
 env:
   - DB_HOST=dummyhost DB_PORT=dummyport APP=dummyapp
-after_success: 'npm run coveralls'
+after_success: 'npm run coverage'
