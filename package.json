@@ -4,6 +4,8 @@
 	"description": "Base Rest API - Authentication, Authorisation, JWT, MongoDb",
 	"main": "index.js",
 	"scripts": {
+		"start": "docker-compose up",
+		"stop": "docker-compose down",
 		"test": "nyc ava --verbose",
 		"coverage": "nyc report --reporter=text-lcov | coveralls"
 	},

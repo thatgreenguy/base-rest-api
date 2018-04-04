@@ -58,4 +58,4 @@ typings/
 .env
 
 # development database persisted data
-db-data/
+data/db/

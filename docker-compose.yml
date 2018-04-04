@@ -4,8 +4,10 @@ services:
   db:
     image: mvertes/alpine-mongo
     volumes:
-      - ./db-data:/data/db
+      - ./data/db:/data/db
   node:
     build: ./
+    volumes:
+    - ./:/src
     links:
       - db
