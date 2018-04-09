@@ -4,7 +4,7 @@ services:
   db:
     image: mvertes/alpine-mongo
     volumes:
-      - ./data/db:/data/db
+      - ../base-rest-api-mongodb/data/db:/data/db
   node:
     build: ./
     volumes:

@@ -7,6 +7,7 @@
 		"start": "docker-compose up",
 		"stop": "docker-compose down",
 		"test": "nyc ava --verbose",
+		"testwatch": "ava --verbose  --watch",
 		"coverage": "nyc report --reporter=text-lcov | coveralls"
 	},
 	"repository": {
@@ -30,8 +31,12 @@
 	},
 	"homepage": "https://github.com/thatgreenguy/base-rest-api#readme",
 	"ava": {
-		"files": ["test/*.test.js"],
-		"source": ["src/*.js"],
+		"source": [
+			"!**/data/db/diagnostic.data",
+			"!**/node_modules/**",
+			"!**/fixtures/**",
+			"!**/helpers/**"
+		],
 		"require": ["babel-register"],
 		"babel": "inherit"
 	},

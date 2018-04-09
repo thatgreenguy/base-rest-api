@@ -6,3 +6,9 @@
 # base-rest-api
 
 Base Rest API - Authentication, Authorisation, JWT, MongoDb
+
+npm start docker-compose up
+
+npm stop docker-compose down
+
+npm test nyc ava --verbose
