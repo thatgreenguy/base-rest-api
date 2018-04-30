@@ -4,7 +4,12 @@ import logger from '../src/utils/logger'
 test('is an object', t => {
   t.is(typeof logger, 'object')
 })
-test('is a function', t => {
-  t.is(typeof logger.transports.console.formatter, 'function')
+console.log(JSON.stringify(logger))
+test('timestamp returns string', t => {
+  const expected = logger.transports.file.timestamp()
+  t.truthy(typeof expected === 'string')
 })
-console.log(logger)
+test('formatter returns a string', t => {
+  const expected = logger.transports.console.timestamp()
+  t.truthy(typeof expected === 'string')
+})

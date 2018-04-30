@@ -1,26 +1,34 @@
+'use strict'
+
 const winston = require('winston')
+const moment = require('moment')
 
-const config = winston.config
+// create formatter for dates used as timestamps
+// const tsFormat = () => (new Date()).toLocaleTimeString();
+const tsFormat = () =>
+  moment()
+    .format('YYYY-MM-DD hh:mm:ss')
+    .trim()
 
-winston.level = process.env.LOG_LEVEL || 'debug'
-
-const logger = new (winston.Logger)({
+// define a logger with 2 transports - console and a file
+const logger = new winston.Logger({
   transports: [
-    new (winston.transports.Console)({
-      timestamp: function () {
-        return (new Date()).toISOString()
-      },
-      formatter: function (options) {
-        // - Return string will be passed to logger.
-        // - Optionally, use options.colorize(options.level, <string>) to
-        //   colorize output based on the log level.
-        return options.timestamp() + ' ' +
-          config.colorize(options.level, options.level.toUpperCase()) + ' ' +
-          (options.message ? options.message : '') +
-          (options.meta && Object.keys(options.meta).length ? '\n\t' + JSON.stringify(options.meta) : '')
-      }
+    // colorize the output to the console
+    new winston.transports.Console({
+      timestamp: tsFormat,
+      colorize: true
+    }),
+    new winston.transports.File({
+      filename: './logs/bra.log',
+      timestamp: tsFormat, // makes timestamp 'pretty'
+      json: true // makes log format just like console output
     })
   ]
 })
+
+// https://github.com/winstonjs/winston/issues/1134
+
+// set logging level one of { error: 0, warn: 1, info: 2, verbose: 3, debug: 4, silly: 5 }
+logger.level = 'debug'
 
 module.exports = logger

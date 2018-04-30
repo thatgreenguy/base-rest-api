@@ -37,11 +37,15 @@
 			"!**/fixtures/**",
 			"!**/helpers/**"
 		],
-		"require": ["babel-register"],
+		"require": [
+			"babel-register"
+		],
 		"babel": "inherit"
 	},
 	"babel": {
-		"presets": ["env"],
+		"presets": [
+			"env"
+		],
 		"env": {
 			"development": {
 				"sourceMaps": "inline"
@@ -68,6 +72,7 @@
 		"body-parser": "1.18.2",
 		"envy": "1.1.0",
 		"express": "4.16.3",
+		"moment": "2.22.1",
 		"mongoose": "5.0.12",
 		"mongoose-query": "0.5.1",
 		"mongoose-timestamp": "0.6.0",
